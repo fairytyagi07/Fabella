@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sketch-to-Story: Draw three sketches and watch AI turn them into a magical story using Quick, Draw! recognition.">
+    <title>FABELLA | AI Drawing Storyteller</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <!-- Animated Background Particles -->
+    <div class="bg-particles" id="bg-particles"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">✨</span>
+                <h1>FABELLA</h1>
+            </div>
+            <p class="tagline">Draw three sketches and watch as AI weaves them into a magical story!</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Step Indicator -->
+        <div class="steps-indicator">
+            <div class="step active" id="step-1-indicator">
+                <div class="step-number">1</div>
+                <span>Draw</span>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step" id="step-2-indicator">
+                <div class="step-number">2</div>
+                <span>Recognize</span>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step" id="step-3-indicator">
+                <div class="step-number">3</div>
+                <span>Story</span>
+            </div>
+        </div>
+
+        <!-- Drawing Section -->
+        <section class="drawing-section" id="drawing-section">
+            <h2 class="section-title">Draw Your Characters!</h2>
+            <p class="section-subtitle">Sketch three objects — our magic AI will recognize them and create a story just
+                for you!</p>
+
+
+
+            <div class="canvases-container">
+                <!-- Canvas 1 -->
+                <div class="canvas-card" id="canvas-card-1">
+                    <div class="canvas-header">
+                        <div class="canvas-label-group">
+                            <span class="canvas-label">Sketch 1</span>
+                        </div>
+                        <div class="canvas-tools">
+                            <button class="btn-tool active" id="tool-pen-1" title="Draw">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-1.5L4 24l-3-3 12.5-12.5L12 7l1.5 1.5 7-7 3 3-7 7z" />
+                                </svg>
+                            </button>
+                            <button class="btn-tool" id="tool-eraser-1" title="Erase">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20 20H7L3 16l4.5-4.5L11 8l4.5-4.5 4.5 4.5V20zM3 16l4.5 4.5M11 8l4.5-4.5" />
+                                </svg>
+                            </button>
+                            <span class="tool-divider"></span>
+                            <button class="btn-clear" id="clear-1" title="Clear canvas">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="canvas-wrapper">
+                        <canvas id="canvas-1" width="280" height="280"></canvas>
+                        <div class="canvas-placeholder" id="placeholder-1">
+                            <span class="placeholder-icon">🎨</span>
+                            <span>Draw here</span>
+                        </div>
+                    </div>
+                    <div class="prediction-badge hidden" id="prediction-1">
+                        <span class="prediction-label"></span>
+                    </div>
+                </div>
+
+                <!-- Canvas 2 -->
+                <div class="canvas-card" id="canvas-card-2">
+                    <div class="canvas-header">
+                        <div class="canvas-label-group">
+                            <span class="canvas-label">Sketch 2</span>
+                        </div>
+                        <div class="canvas-tools">
+                            <button class="btn-tool active" id="tool-pen-2" title="Draw">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-1.5L4 24l-3-3 12.5-12.5L12 7l1.5 1.5 7-7 3 3-7 7z" />
+                                </svg>
+                            </button>
+                            <button class="btn-tool" id="tool-eraser-2" title="Erase">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20 20H7L3 16l4.5-4.5L11 8l4.5-4.5 4.5 4.5V20zM3 16l4.5 4.5M11 8l4.5-4.5" />
+                                </svg>
+                            </button>
+                            <span class="tool-divider"></span>
+                            <button class="btn-clear" id="clear-2" title="Clear canvas">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="canvas-wrapper">
+                        <canvas id="canvas-2" width="280" height="280"></canvas>
+                        <div class="canvas-placeholder" id="placeholder-2">
+                            <span class="placeholder-icon">🖌️</span>
+                            <span>Draw here</span>
+                        </div>
+                    </div>
+                    <div class="prediction-badge hidden" id="prediction-2">
+                        <span class="prediction-label"></span>
+                    </div>
+                </div>
+
+                <!-- Canvas 3 -->
+                <div class="canvas-card" id="canvas-card-3">
+                    <div class="canvas-header">
+                        <div class="canvas-label-group">
+                            <span class="canvas-label">Sketch 3</span>
+                        </div>
+                        <div class="canvas-tools">
+                            <button class="btn-tool active" id="tool-pen-3" title="Draw">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-1.5L4 24l-3-3 12.5-12.5L12 7l1.5 1.5 7-7 3 3-7 7z" />
+                                </svg>
+                            </button>
+                            <button class="btn-tool" id="tool-eraser-3" title="Erase">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20 20H7L3 16l4.5-4.5L11 8l4.5-4.5 4.5 4.5V20zM3 16l4.5 4.5M11 8l4.5-4.5" />
+                                </svg>
+                            </button>
+                            <span class="tool-divider"></span>
+                            <button class="btn-clear" id="clear-3" title="Clear canvas">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="canvas-wrapper">
+                        <canvas id="canvas-3" width="280" height="280"></canvas>
+                        <div class="canvas-placeholder" id="placeholder-3">
+                            <span class="placeholder-icon">✏️</span>
+                            <span>Draw here</span>
+                        </div>
+                    </div>
+                    <div class="prediction-badge hidden" id="prediction-3">
+                        <span class="prediction-label"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brush & Color Controls -->
+            <div class="drawing-controls">
+                <div class="control-group">
+                    <label>🎨 Magic Colors</label>
+                    <div class="color-palette" id="color-palette">
+                        <button class="color-swatch active" data-color="#000000" style="background: #000000;" title="Black"></button>
+                        <button class="color-swatch" data-color="#38bdf8" style="background: #38bdf8;" title="Sky Blue"></button>
+                        <button class="color-swatch" data-color="#4ade80" style="background: #4ade80;" title="Magic Green"></button>
+                        <button class="color-swatch" data-color="#fb923c" style="background: #fb923c;" title="Sunset Orange"></button>
+                        <button class="color-swatch" data-color="#a855f7" style="background: #a855f7;" title="Royal Purple"></button>
+                        <button class="color-swatch" data-color="#ec4899" style="background: #ec4899;" title="Pink"></button>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="brush-size">🖌️ Brush Size</label>
+                    <input type="range" id="brush-size" min="2" max="20" value="12">
+                    <span id="brush-size-value">12</span>
+                </div>
+            </div>
+
+            <!-- Story Options -->
+            <div class="story-options" id="story-options">
+                <!-- Word Length -->
+                <div class="option-group">
+                    <label class="option-label">📏 Story Length</label>
+                    <div class="option-pills" id="length-pills">
+                        <button class="pill" id="pill-short" data-value="short">Short</button>
+                        <button class="pill active" id="pill-medium" data-value="medium">Medium</button>
+                        <button class="pill" id="pill-long" data-value="long">Long</button>
+                    </div>
+                </div>
+
+                <!-- Genre -->
+                <div class="option-group">
+                    <label class="option-label">🎭 Genre</label>
+                    <div class="genre-grid" id="genre-grid">
+                        <button class="genre-chip active" data-genre="Fantasy">⚔️ Fantasy</button>
+                        <button class="genre-chip" data-genre="Mystery">🔍 Mystery</button>
+                        <button class="genre-chip" data-genre="Adventure">🗺️ Adventure</button>
+                        <button class="genre-chip" data-genre="Romance">💕 Romance</button>
+                        <button class="genre-chip" data-genre="Horror">👻 Horror</button>
+                        <button class="genre-chip" data-genre="Science Fiction">🚀 Sci-Fi</button>
+                        <button class="genre-chip" data-genre="Fairy Tale">🧚 Fairy Tale</button>
+                        <button class="genre-chip" data-genre="Comedy">😄 Comedy</button>
+                        <button class="genre-chip" data-genre="__other__">✏️ Other…</button>
+                    </div>
+                    <div class="custom-genre-wrap hidden" id="custom-genre-wrap">
+                        <input type="text" id="custom-genre-input" class="custom-genre-input"
+                            placeholder="Type your genre…" maxlength="40">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-secondary" id="btn-clear-all">
+                    <span>Clear All</span>
+                </button>
+                <button class="btn btn-primary" id="btn-recognize">
+                    <span class="btn-text">🪄 Process &amp; Create Story!</span>
+                    <span class="btn-loading hidden">
+                        <span class="spinner"></span>
+                        Processing…
+                    </span>
+                </button>
+            </div>
+
+            <!-- Progress Bar for Story Generation -->
+            <div class="progress-container" id="story-progress-container">
+                <div class="progress-bar" id="story-progress-bar"></div>
+                <p class="progress-status" id="story-progress-status">Magician is thinking...</p>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="story-section hidden" id="story-section">
+            <div class="story-card">
+                <div class="story-header">
+                    <div class="story-title-wrap">
+                        <h2 class="story-title">Your Story</h2>
+                        <span class="story-genre" id="story-genre"></span>
+                    </div>
+                    <button class="btn btn-secondary" id="btn-play-audio" title="Play Story"
+                        style="display: none; padding: 5px 15px; font-size: 0.9rem;">
+                        🔊 Play Audio
+                    </button>
+                </div>
+                <div class="story-objects" id="story-objects"></div>
+                <div class="story-text" id="story-text"></div>
+                <div class="story-actions">
+                    <button class="btn btn-secondary" id="btn-new-story">
+                        🔄 Generate New Story
+                    </button>
+                    <button class="btn btn-secondary" id="btn-draw-again">
+                        🎨 Draw Again
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>using Quick, Draw! Dataset & TensorFlow</p>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>

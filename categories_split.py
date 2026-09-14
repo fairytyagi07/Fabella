@@ -1,0 +1,40 @@
+CATEGORIES_SET1 = [
+    "ambulance", "angel", "ant", "anvil", "apple", "arm", "asparagus", "axe", "backpack", "banana",
+    "bandage", "barn", "baseball", "basket", "basketball", "bat", "bathtub", "beach", "bear", "beard",
+    "bed", "bee", "belt", "bench", "bicycle", "binoculars", "bird", "blackberry", "blueberry", "book",
+    "boomerang", "bottlecap", "bowtie", "bracelet", "brain", "bread", "bridge", "broccoli", "broom", "bucket",
+    "bulldozer", "bus", "bush", "butterfly", "cactus", "cake", "calculator", "calendar", "camel", "camera",
+    "camouflage", "campfire", "candle", "cannon", "canoe", "car", "carrot", "castle", "cat", "cello",
+    "chair", "chandelier", "church", "circle", "clarinet", "clock", "cloud", "compass", "computer", "cookie",
+    "cooler", "couch", "cow", "crab", "crayon", "crocodile", "crown", "cup", "diamond", "dishwasher",
+    "dog", "dolphin", "donut", "door", "dragon", "dresser", "drill", "drums", "duck", "dumbbell",
+    "ear", "elbow", "elephant", "envelope", "eraser", "eye", "eyeglasses", "face", "fan", "feather",
+    "fence", "finger", "fireplace", "firetruck", "fish"
+]
+
+CATEGORIES_SET2 = [
+    "flamingo", "flashlight", "flower", "foot", "fork", "frog", "garden", "giraffe", "glasses", "globe",
+    "goat", "goldfish", "goose", "grapes", "grass", "guitar", "hamburger", "hammer", "hand", "harp",
+    "hat", "headphones", "hedgehog", "helicopter", "helmet", "hexagon", "horse", "hospital", "hourglass", "house",
+    "hurricane", "igloo", "inbox", "jacket", "jail", "jellyfish", "kangaroo", "key", "keyboard", "knee",
+    "knife", "ladder", "lantern", "laptop", "leaf", "leg", "lighthouse", "lightning", "line", "lion",
+    "lipstick", "lobster", "lollipop", "mailbox", "map", "marker", "matches", "megaphone", "mermaid", "microphone",
+    "microwave", "monkey", "moon", "mosquito", "motorbike", "mountain", "mouse", "moustache", "mouth", "mug",
+    "mushroom", "nail", "necklace", "nose", "notebook", "ocean", "octopus", "onion", "oven", "owl",
+    "paintbrush", "panda", "pants", "parachute", "parrot", "passport", "peanut", "pear", "peas", "pencil",
+    "penguin", "piano", "pig", "pillow", "pineapple"
+]
+
+CATEGORIES_SET3 = [
+    "pizza", "pliers", "pond", "pool", "popsicle", "postcard", "potato", "purse", "rabbit", "raccoon",
+    "radio", "rain", "rainbow", "rake", "rhinoceros", "rifle", "river", "sailboat", "sandwich", "saw",
+    "saxophone", "scissors", "scorpion", "shark", "sheep", "shoe", "shorts", "shovel", "sink", "skateboard",
+    "skull", "skyscraper", "snail", "snake", "snorkel", "snowflake", "snowman", "sock", "speedboat", "spider",
+    "spoon", "spreadsheet", "square", "squiggle", "squirrel", "stairs", "star", "steak", "stereo", "stethoscope",
+    "stitches", "stove", "strawberry", "streetlight", "submarine", "suitcase", "sun", "swan", "sweater", "sword",
+    "t-shirt", "table", "teapot", "teddy-bear", "telephone", "television", "tent", "thermometer", "tiger", "toaster",
+    "toe", "toilet", "tooth", "toothbrush", "toothpaste", "tornado", "tractor", "train", "tree", "triangle",
+    "trombone", "truck", "trumpet", "umbrella", "underwear", "van", "vase", "violin", "watermelon", "waterslide",
+    "whale", "wheel", "windmill", "wristwatch", "yoga", "zebra", "zigzag"
+]
+

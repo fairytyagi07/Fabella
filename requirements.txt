@@ -1,0 +1,11 @@
+flask>=3.0
+tensorflow>=2.15
+numpy
+Pillow
+scipy
+google-generativeai
+python-dotenv
+pyttsx3
+requests
+matplotlib
+scikit-learn
